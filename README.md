@@ -95,7 +95,7 @@ any of its components, please remember to cite references [1] and
 
 # Code compilation
 
-The code compilation is based on Make*,* which is a build automation
+The code compilation is based on Make, which is a build automation
 tool. It is assumed that the code is compiled in Linux environment, even
 though a Windows build is also possible (e.g. using WSL). To compile the
 code, you need:
