@@ -197,7 +197,7 @@ parameter specifies the type of depth weighting. The type 1, is based on
 the inverse power law of the distance from the surface to the $j$-th grid
 cell, defined as:
 
-$W(j) = \frac{1}{\left( Z_{j} - Z_{0} \right)^{\frac{q}{2}}}$
+$$W(j) = \frac{1}{( Z_{j} - Z_{0} )^{q/2}}$$
 
 The corresponding free parameters, power $q$ and a shift $Z_{0}$ can be
 specified in parameters **power** and **Z0**, for gravity and magnetic
@@ -378,15 +378,14 @@ The first line contains the number of data values, followed by lines
 that include the 3D data positions (x, y, z) and the corresponding data
 value, all separated by spaces, as shown below:
 
-$N$
+```
+N
+p_x(1)  p_y(1)  p_z(1)  d(1)
+...
+p_x(N)  p_y(N)  p_z(N)  d(N)
+```
 
-$p_{x}^{1} \; p_{y}^{1} \; p_{z}^{1} \; d^{1}$
-
-`...`
-
-$p_{x}^{N} \; p_{y}^{N} \; p_{z}^{N} \; d^{N}$
-
-Here $N$ is the number of data values, $p_{x}^{i} \; p_{y}^{i} \; p_{z}^{i}$ is
+Here $N$ is the number of data values, `p_x(i) p_y(i) p_z(i)` is
 the 3D position of the *i*-th data, and $d^{i}$ is the value of the
 *i*-th data. For multicomponent data (e.g., gravity gradiometry), each
 data component is specified in a separate column.
@@ -414,16 +413,15 @@ The first line contains the number of model cells. Each subsequent line
 includes the cell coordinates, model value and 3D cell index, all
 separated by spaces, as shown below:
 
-$N$
-
-$X_{\min}^{1} \; X_{\max}^{1} \; Y_{\min}^{1} \; Y_{\max}^{1} \; Z_{\min}^{1} \; Z_{\max}^{1} \; m^{1} \; i^{1} \; j^{1} \; k^{1}$
-
-`...`
-
-$X_{\min}^{N} \; X_{\max}^{N} \; Y_{\min}^{N} \; Y_{\max}^{N} \; Z_{\min}^{N} \; Z_{\max}^{N} \; m^{N} \; i^{N} \; j^{N} \; k^{N}$
+```
+N
+X_min(1)  X_max(1)  Y_min(1)  Y_max(1)  Z_min(1)  Z_max(1)  m(1)  i(1)  j(1)  k(1)
+...
+X_min(N)  X_max(N)  Y_min(N)  Y_max(N)  Z_min(N)  Z_max(N)  m(N)  i(N)  j(N)  k(N)
+```
 
 Here $N$ is the number of model cells,
-$X_{\min}^{i} \; X_{\max}^{i} \; Y_{\min}^{i} \; Y_{\max}^{i} \; Z_{\min}^{i} \; Z_{\max}^{i}$
+`X_min(i) X_max(i) Y_min(i) Y_max(i) Z_min(i) Z_max(i)`
 are the min/max coordinates of the X, Y, Z planes of the cell
 (rectangular prism), $m^{i}$ is the synthetic model value for forward
 modelling (zero if not available), $i^{i}j^{i}k^{i}$ is the 3D
@@ -459,13 +457,12 @@ Local bound constraints require a bounds file. The path to the bounds
 files is specified in the **boundsFile** parameter. The format of the
 bounds file is as follows:
 
-$N \; L$
-
-$m_{\min}^{1,1} \; m_{\max}^{1,1} \; \ldots \; m_{\min}^{1,L} \; m_{\max}^{1,L} \; w^{1}$
-
-`...`
-
-$m_{\min}^{N,1} \; m_{\max}^{N,1} \; \ldots \; m_{\min}^{N,L} \; m_{\max}^{N,L} \; w^{N}$
+```
+N  L
+m_min(1,1)  m_max(1,1)  ...  m_min(1,L)  m_max(1,L)  w(1)
+...
+m_min(N,1)  m_max(N,1)  ...  m_min(N,L)  m_max(N,L)  w(N)
+```
 
 Here $N$ is the number of model cells, $L$ is the number of bounds
 (lithologies), and each subsequent line contains the minimum and maximum
@@ -482,13 +479,12 @@ Clustering constraints require an input mixture file that describes the
 clusters (**mixtureFile**). The format of the mixture file is as
 follows:
 
-$n$
-
-$w_{1} \; \mu_{1}^{G} \; \sigma_{1}^{G} \; \mu_{1}^{M} \; \sigma_{1}^{M} \; \sigma_{1}^{GM}$
-
-`...`
-
-$w_{n} \; \mu_{n}^{G} \; \sigma_{n}^{G} \; \mu_{n}^{M} \; \sigma_{n}^{M} \; \sigma_{n}^{GM}$
+```
+n
+w(1)  mu_G(1)  sigma_G(1)  mu_M(1)  sigma_M(1)  sigma_GM(1)
+...
+w(n)  mu_G(n)  sigma_G(n)  mu_M(n)  sigma_M(n)  sigma_GM(n)
+```
 
 Here, $n$ is the number of clusters, and each subsequent line defines,
 for the *i*-th cluster, the local weight $w_{i}$, the mean and standard
@@ -500,13 +496,12 @@ When the local type of constraints is selected (**constraintsType**=2),
 the cell weights file (**cellWeightsFile**) must also be provided, in
 the following format:
 
-$N \; n$
-
-$w_{1}^{1}$ `...` $w_{n}^{1}$
-
-`...`
-
-$w_{1}^{N}$ `...` $w_{n}^{N}$
+```
+N  n
+w(1,1)  ...  w(1,n)
+...
+w(N,1)  ...  w(N,n)
+```
 
 Here $N$ is the total number of cells, and $n$ is the number of
 clusters. Each subsequent line contains the local cluster weights for
@@ -636,7 +631,7 @@ helps to understand how input parameters affect the rate and quality of
 convergence. One key parameter to monitor during the inversion process
 is the relative data misfit, defined as:
 
-$cost = \frac{\left\| d_{calc} - d_{obs} \right\|_{2}}{\left\| d_{obs} \right\|_{2}}$.
+$$cost = \frac{\lVert d_{calc} - d_{obs} \rVert_{2}}{\lVert d_{obs} \rVert_{2}}$$
 
 This cost, along with other costs (as discussed in the previous
 subsection), is also recorded in the *costs.txt* file. Additional
