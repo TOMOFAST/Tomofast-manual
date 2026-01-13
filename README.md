@@ -420,11 +420,10 @@ topography. This approach eliminates the need to define air cells,
 thereby reducing the grid size and memory requirements, as illustrated
 in Figure 1.
 
-![Model grid with topography](images/image1.png)
+![Model grid with topography](images/tomofast-grid.png)
 
 Figure 1. Example of a model grid with topography. Note that the mesh is
-effectively draped beneath the topography, with the cell height
-increasing with depth.
+effectively draped beneath the topography.
 
 ## Prior and starting models
 
