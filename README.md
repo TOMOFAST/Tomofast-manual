@@ -168,21 +168,13 @@ unit conversions and Z-axis orientation.
 
 ## Model grid (modelGrid)
 
-Contains the total number of grid cells, and paths to the model grid
-files.
-
-For forward data calculation from a synthetic model, the known model
-values can be specified in the model grid file (column #7). If a
-synthetic model is unavailable, the model values in the grid file can be
-set to zero. For details on the file format, please refer to the next
-section of this manual.
+Contains the dimensions of the model grid, and paths to the model grid
+files. For details on the file format, refer to the next section of this manual.
 
 ## Data (forward.data)
 
-Contains the number of data, and paths to data grids, and the observed
-data to be inverted. Note, that the data grid and data values files have
-the same file format and can point to the same files. For details on the
-file format, please refer to the next section of this manual.
+Contains the number of data points and the path to the data file, which includes both the data grid and observed values to be inverted. 
+For details on the file format, refer to the next section of this manual.
 
 ## Magnetic field (forward.magneticField)
 
