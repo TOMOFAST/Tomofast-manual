@@ -2,7 +2,7 @@
 
 **Geophysical 3D parallel potential field joint inversion package**
 
-*Code version v.2.0.5*
+*Code version v.2.0.9*
 
 By Vitaliy Ogarko
 
@@ -368,8 +368,8 @@ below.
 
 ## Data file format
 
-The data grid and data values files share the same format for
-simplicity. The paths to these data files are specified in the Parfile
+The data grid and data values files are stored in the **dataGridFile** file.
+The paths to this file is specified in the Parfile
 sections **forward.data.grav** and **forward.data.magn** for gravity and
 magnetic problems, respectively. For more details, refer to the file
 *Parameters_all.txt*.
@@ -389,13 +389,10 @@ Here $N$ is the number of data values, `p_x(i) p_y(i) p_z(i)` is
 the 3D position of the *i*-th data, and $d^{i}$ is the value of the
 *i*-th data. For multicomponent data (e.g., gravity gradiometry), each
 data component is specified in a separate column.
+Note that the default Tomofast-x Z-axis points downward, so data Z-positions above the surface should have negative signs.
 
-The data value is used in the data values files (**dataValuesFile**) but
-is ignored in the data grid files (**dataGridFile**). Separate paths for
-the data grid and values are provided to enable inversion of forward
-data generated from the input synthetic model (with model values stored
-in the model grid file) within the same inversion run, allowing for
-tests with synthetic models.
+For tests with synthetic models, you can invert the forward-modeled data calculated from the synthetic model within the same inversion run. 
+To do this, enable the **useSyntheticModelForDataValues** flag and provide the path to the synthetic model in the **syntheticModelFile** parameter.
 
 ## Model grid file format
 
@@ -415,16 +412,15 @@ separated by spaces, as shown below:
 
 ```
 N
-X_min(1)  X_max(1)  Y_min(1)  Y_max(1)  Z_min(1)  Z_max(1)  m(1)  i(1)  j(1)  k(1)
+X_min(1)  X_max(1)  Y_min(1)  Y_max(1)  Z_min(1)  Z_max(1)  i(1)  j(1)  k(1)
 ...
-X_min(N)  X_max(N)  Y_min(N)  Y_max(N)  Z_min(N)  Z_max(N)  m(N)  i(N)  j(N)  k(N)
+X_min(N)  X_max(N)  Y_min(N)  Y_max(N)  Z_min(N)  Z_max(N)  i(N)  j(N)  k(N)
 ```
 
 Here $N$ is the number of model cells,
 `X_min(i) X_max(i) Y_min(i) Y_max(i) Z_min(i) Z_max(i)`
 are the min/max coordinates of the X, Y, Z planes of the cell
-(rectangular prism), $m^{i}$ is the synthetic model value for forward
-modelling (zero if not available), $i^{i}j^{i}k^{i}$ is the 3D
+(rectangular prism), $i^{i}j^{i}k^{i}$ is the 3D
 cell-index (integer).
 
 Surface topography can be specified by draping the mesh beneath the
