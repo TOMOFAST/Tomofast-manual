@@ -14,6 +14,7 @@ Centre for Exploration Targeting, The University of Western Australia, 2025.
 
 - [Introduction](#introduction)
 - [Code compilation](#code-compilation)
+- [Running the code](#running-the-code)
 - [Description of code parameters](#description-of-code-parameters)
   - [Global (global)](#global-global)
   - [Model grid (modelGrid)](#model-grid-modelgrid)
@@ -100,7 +101,7 @@ tool. It is assumed that the code is compiled in Linux environment, even
 though a Windows build is also possible (e.g. using WSL). To compile the
 code, you need:
 
--   Compiler GCC, or Intel Fortran compiler.
+-   Fortran compiler: gfortran (GCC version 9 and above) or Intel Fortran compiler
 
 -   MPI library (such as OpenMPI or MPICH).
 
@@ -120,16 +121,26 @@ To clean the compilation files (to perform a clean compilation), run:
 make clean
 ```
 
-To run the code with your parameter file:
+Note, that the Makefile by default assumes the GCC compiler. It can be
+switched to the Intel compiler by setting the flag "COMPILER = 2".
+
+For full debugging information, in the Makefile different sets of FLAGS
+are provided. The flags to output the vector optimization report,
+OPT_INFO, can also be enabled.
+
+# Running the code
+
+To run the code with your parameter file
 
 ```bash
-mpirun -np <Number-of-cores> ./tomofastx -j <Parfile path>
+mpirun -np <Number-of-cores> ./tomofastx -p <Parfile path>
 ```
+For a serial run set Number-of-cores to 1.
 
 To run unit tests in serial:
 
 ```bash
-./runtests.sh
+mpirun -np 1 ./runtests.sh
 ```
 
 and in parallel:
@@ -137,15 +148,6 @@ and in parallel:
 ```bash
 mpirun -np 3 ./runtests.sh
 ```
-
-Note, that the Makefile by default assumes the GCC compiler. It can be
-switched to the Intel compiler by setting "FC = mpiifort" and switching
-the FLAGS variable definition to the Intel one (commented out by
-default).
-
-For full debugging information, in the Makefile different sets of FLAGS
-are provided. The flags to output the vector optimization report,
-OPT_INFO, can also be enabled.
 
 # Description of code parameters
 
