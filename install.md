@@ -84,3 +84,4 @@ then restart your machine. This will also install the Ubuntu operating system wi
 ```
      make
 ```
+Note that the Makefile by default assumes the gfortran (GCC) compiler. It can be switched to the Intel compiler by setting the flag "COMPILER = 2". To use the Intel compiler, you will need to install it separately on your system.
