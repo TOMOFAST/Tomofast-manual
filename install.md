@@ -88,4 +88,9 @@ then restart your machine. This will also install the Ubuntu operating system wi
 ```
      make
 ```
+6) If the code compiles without error, it will create a new tomofastx file and then you can test the code with:   
+```
+     mpirun -np 4 ./tomofastx -p ./parfiles/Parfile_mansf_slice.txt
+```
+
 Note that the Makefile by default assumes the gfortran (GCC) compiler. It can be switched to the Intel compiler by setting the flag "COMPILER = 2". To use the Intel compiler, you will need to install it separately on your system.
