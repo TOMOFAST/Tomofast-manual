@@ -13,7 +13,7 @@ Centre for Exploration Targeting, The University of Western Australia, 2025.
 # Contents
 
 - [Introduction](#introduction)
-- [Code compilation](#code-compilation)
+- [Code installation](#code-installation)
 - [Running the code](#running-the-code)
 - [Description of code parameters](#description-of-code-parameters)
   - [Global (global)](#global-global)
@@ -94,39 +94,9 @@ optimizations, additional examples, and more. If you use this code or
 any of its components, please remember to cite references [1] and
 [2].
 
-# Code compilation
+# Code installation
 
-The code compilation is based on Make, which is a build automation
-tool. It is assumed that the code is compiled in Linux environment, even
-though a Windows build is also possible (e.g. using WSL). To compile the
-code, you need:
-
--   Fortran compiler: gfortran (GCC version 9 and above) or Intel Fortran compiler
-
--   MPI library (such as OpenMPI or MPICH).
-
-The Makefile is contained in the root folder and should be used to
-compile Tomofast-x. Compiling the code is a necessary step to be able to
-run inversions.
-
-To compile the code run the make command in the code directory as:
-
-```bash
-make
-```
-
-To clean the compilation files (to perform a clean compilation), run:
-
-```bash
-make clean
-```
-
-Note, that the Makefile by default assumes the GCC compiler. It can be
-switched to the Intel compiler by setting the flag "COMPILER = 2".
-
-For full debugging information, in the Makefile different sets of FLAGS
-are provided. The flags to output the vector optimization report,
-OPT_INFO, can also be enabled.
+See [Installation instructions](install.md) for detailed installation instructions.
 
 # Running the code
 
