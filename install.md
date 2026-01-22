@@ -2,6 +2,10 @@
 
 Installation instructions for Windows and Linux systems are provided below.
 
+- [Windows Native](#windows-native)
+- [Windows WSL](#windows-wsl)
+- [Linux / MacOS](#linux--macos)
+
 #### Windows Native
 1) Install Visual Studio Build Tools and C++ Desktop Tools   
    
