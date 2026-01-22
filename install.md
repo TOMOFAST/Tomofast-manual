@@ -71,7 +71,7 @@ First install Windows Subsytem for Linux (WSL): Open **Windows PowerShell** or W
 ```
 then restart your machine. This will also install the Ubuntu operating system wihin WSL (it will not affect your normal Windows system). Now follow the steps for Linux installation below.
 
-#### Linux
+#### Linux / MacOS
 1) Install **gfortran** compiler using the relevant install commands: https://fortran-lang.org/learn/os_setup/install_gfortran/   
 2) Install **OpenMPI** library using the relevant install commands: https://docs.open-mpi.org/en/v5.0.x/installing-open-mpi/quickstart.html   
 3) If not already installed, install **git** on your computer using the relevant install commands: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git   
