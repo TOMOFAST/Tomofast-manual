@@ -29,7 +29,7 @@ Installation instructions for Windows and Linux systems are provided below.
 
 - https://github.com/TOMOFAST/Tomofast-x
 
-- ii.	Open **x64 Native Tools** Command Prompt from Start Menu-> Visual Studio 2026 Directory
+- ii.	Open **x64 Native Tools** Command Prompt from Start Menu → Visual Studio 2026 Directory
 
 - iii.	Once the console is open, copy or type (including quotes):
 
@@ -41,14 +41,15 @@ Installation instructions for Windows and Linux systems are provided below.
 ``` 
 set PATH=%PATH%;C:\Program Files (x86)\GnuWin32\bin
 ``` 
-v.	Then change directory (linux command is cd so something like cd C:\Users\vogarko\Downloads\Tomofast-x-master) to unzipped Tomofast-x code directory, then copy or type:
+- v.	Then change directory (linux command is cd so something like cd C:\Users\vogarko\Downloads\Tomofast-x-master) to unzipped Tomofast-x code directory, then copy or type:
 ``` 
-make
+make WINDOWS=1
 ``` 
-vi.	If the code compiles without error, it will create a new tomofastx.exe file and then you can test the code with:
+- vi.	If the code compiles without error, it will create a new tomofastx.exe file and then you can test the code with:
 ``` 
 mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
-``` 
+```
+
 ##### b)	Alternatively, download the precompiled tomofastx.exe file from here:
 
 - https://tectonique.net/tomofast-x-q/tomofastx.exe
