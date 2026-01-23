@@ -492,8 +492,8 @@ They follow the same format as the input data files and
 correspond to the gravity and magnetic problems, named with the prefixes
 "grav" and "mag." The files for the gravity problem are:
 
--   **grav_synth.txt** — Forward-modeled data from the synthetic model (optional, only if synthetic model provided).
--   **grav_obs.txt** — Observed data (identical to the input data).
+-   **grav_synthetic.txt** — Forward-modeled data from the synthetic model (optional, only if synthetic model provided).
+-   **grav_observed.txt** — Observed data (identical to the input data).
 -   **grav_prior.txt** — Forward-modeled data from the prior model.
 -   **grav_starting.txt** — Forward-modeled data from the starting model.
 -   **grav_final.txt** — Forward-modeled data from the final inverted model.
@@ -516,12 +516,9 @@ in binary vtk format, which can be viewed using the free open-source
 software Paraview. For example, for the gravity problem, the generated
 files are:
 
--   **grav_synth_model3D_full.vtk** -- the synthetic model (optional).
-
--   **grav_prior_model3D_full.vtk** -- the prior model (optional).
-
--   **grav_starting_model3D_full.vtk** -- the starting model (optional).
-
+-   **grav_synth_model3D_full.vtk** — the synthetic model (optional).
+-   **grav_prior_model3D_full.vtk** — the prior model (optional).
+-   **grav_starting_model3D_full.vtk** — the starting model (optional).
 -   **grav_final_model3D_full.vtk** -- the final inverted model.
 
 The code also generates vtk files with model slices (profiles) that cut
