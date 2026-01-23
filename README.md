@@ -53,13 +53,13 @@ single-domain or joint inversion of gravity and magnetic data. It also
 supports the inversion of gravity gradiometry data (FTG) and can handle
 multiple-component magnetic data. The platform is capable of inverting
 for the magnetization vector, including remanence, while incorporating
-petrophysical constraints [1-6]. To improve the final model by
+petrophysical constraints. To improve the final model by
 incorporating geological and petrophysical information into the
 inversion, the code supports various constraints. These include a prior
 model, cross-gradient constraints, 'smart' gradients, disjoint
 interval bounds, and clustering constraints. For details on the
-equations solved and the types of constraints applied, refer to
-reference [1] and the sources cited therein.
+equations solved and the types of constraints applied, 
+refer to (Ogarko et al., 2024; Giraud et al., 2021) and the sources cited therein.
 
 The model grid can accommodate arbitrary surface topography. Unlike
 other approaches, Tomofast-x does not require the addition of 'air
@@ -91,8 +91,8 @@ downloaded from the following GitHub repository:
 
 You're welcome to submit pull requests for new features, bug fixes,
 optimizations, additional examples, and more. If you use this code or
-any of its components, please remember to cite references [1] and
-[2].
+any of its components, please cite references (Ogarko et al., 2024) and
+(Giraud et al., 2021).
 
 # Code installation
 
@@ -174,7 +174,7 @@ configured for a model of interest, as they depend on the model grid
 The depth weighting type 2 corresponds to the depth weighting based on
 the distance to data (i.e., it varies in all model dimensions). It is a
 preferable option for models with non-flat topography. For more details,
-see Ref. [1].
+see (Ogarko et al., 2024).
 
 ## Sensitivity kernel (sensit)
 
@@ -198,7 +198,7 @@ reference.
 ## Prior model (inversion.priorModel)
 
 The prior (or reference) model is used to apply model damping
-constraints to the cost function (see Ref. [2]). The parameter
+constraints to the cost function (Giraud et al., 2021). The parameter
 **type** defines how the prior model is initialized. If type 1 is
 selected, all values in the prior model will be initialized from a value
 specified in the **value** parameter. If type 2 is chosen, the prior
@@ -238,7 +238,7 @@ iterations.
 ## Model damping (inversion.modelDamping)
 
 Contains a damping weight $\alpha$ and the $L_{p}$ norm power $p$ for
-the model damping term, see Refs. [2, 8]. Note different values of
+the model damping term (Giraud et al., 2021; Martin et al., 2018). Note different values of
 $\alpha$ for gravity and magnetic problems, due to different scale of
 physical units. When $\alpha = 0$ the model damping is not active, even
 though the depth weighting is always active, via the sensitivity matrix
@@ -277,7 +277,7 @@ When bound constraints are enabled, the number of major iterations
 should be around 20-100 to allow the model parameters to move within the
 specified bounds. Convergence progress can be monitored by checking the
 ADMM cost in the log and the costs file. For more details on disjoint
-interval bound constraints, refer to Ref. [3].
+interval bound constraints, refer to (Ogarko et al., 2021).
 
 ## Damping-gradient constraints (inversion.dampingGradient)
 
@@ -286,14 +286,14 @@ constraints. These constraints can be either a standard model gradient
 term (when **weightType**=1) or a 'smart' gradient (when
 **weightType**=2), where the model gradient is preconditioned with local
 weights. These local weights can be based on the second model. For more
-details on 'smart' gradient constraints, see Refs. [4-5].
+details on 'smart' gradient constraints, see (Giraud et al., 2019).
 
 ## Cross-gradient constraints (inversion.crossGradient)
 
 This section contains parameters for setting up cross-gradient
 constraints for joint inversion. The constraints are enabled when the
 weight parameter is greater than zero. For more details on
-cross-gradient constraints, see Ref. [6].
+cross-gradient constraints, see (Martin et al., 2021).
 
 ## Clustering constraints (inversion.clustering)
 
@@ -302,8 +302,7 @@ which can be used in both single and joint inversions. The constraints
 are enabled when the respective **weight** parameter is greater than
 zero. For details on the file formats for the mixture file
 (**mixtureFile**) and the cell weights file (**cellWeightsFile**), refer
-to Section 5.5. For more information on clustering constraints, see Ref.
-[7].
+to Section 5.5. For more information on clustering constraints, see (Giraud et al., 2019).
 
 # Description of input data formats
 
@@ -464,8 +463,7 @@ w(N,1)  ...  w(N,n)
 
 Here $N$ is the total number of cells, and $n$ is the number of
 clusters. Each subsequent line contains the local cluster weights for
-the *i*-th cell. For more details on clustering constraints, refer to
-Ref. [7].
+the *i*-th cell. For more details on clustering constraints, refer to (Giraud et al., 2019).
 
 # Description of the code output files
 
