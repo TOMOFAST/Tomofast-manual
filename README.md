@@ -2,7 +2,7 @@
 
 **Geophysical 3D parallel potential field joint inversion package**
 
-*Code version v.2.0.9*
+*Code version v.2.0.10*
 
 By Vitaliy Ogarko
 
