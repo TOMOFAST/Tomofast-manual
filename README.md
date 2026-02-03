@@ -15,6 +15,7 @@ Centre for Exploration Targeting, The University of Western Australia, 2025.
 - [Introduction](#introduction)
 - [Code installation](#code-installation)
 - [Running the code](#running-the-code)
+- [Running the examples](#running-the-examples)
 - [Description of code parameters](#description-of-code-parameters)
   - [Global (global)](#global-global)
   - [Model grid (modelGrid)](#model-grid-modelgrid)
@@ -118,6 +119,21 @@ and in parallel:
 ```bash
 mpirun -np 3 ./runtests.sh
 ```
+
+# Running the examples
+
+## Browser-based examples
+
+You can run examples in your browser without local installation using our [Google Colab notebook](https://colab.research.google.com/github/TOMOFAST/Tomofast-examples/blob/main/Tomofast-x_examples.ipynb), which includes visualization of output models.
+
+## Local execution
+
+To run the test example:
+```bash
+mpirun -np 1 ./tomofastx -p ./parfiles/Parfile_mansf_slice.txt
+```
+
+If the code runs successfully you will see at the end of the screen log the messages "Writing the full model...", and "THE END". To visualize the final model, open in Paraview the file `Paraview/grav_final_model3D_full.vtk`, located in the output folder.
 
 # Description of code parameters
 
