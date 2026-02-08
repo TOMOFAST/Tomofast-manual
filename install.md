@@ -6,7 +6,21 @@ Installation instructions for Windows and Linux systems are provided below.
 - [Windows WSL](#windows-wsl)
 - [Linux / MacOS](#linux--macos)
 
-#### Windows Native
+
+#### Windows Native (runtime, Recommended!)
+1) Download and install oneMPI runtimes:   
+   
+- https://tectonique.net/tomofast-x-q/intel-mpi-2021.17.2.93_offline.exe   and 
+     
+- https://tectonique.net/tomofast-x-q/w_ifx_runtime_p_2025.3.2.835.exe      
+
+
+2) Download the precompiled executable:
+   
+- https://tectonique.net/tomofast-x-q/tomofastx.exe      
+
+
+#### Windows Native (for Compilation)
 1) Install Visual Studio Build Tools and C++ Desktop Tools   
    
 - https://visualstudio.microsoft.com/downloads/?q=build+tools   
