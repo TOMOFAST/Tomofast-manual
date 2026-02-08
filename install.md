@@ -15,7 +15,7 @@ Installation instructions for Windows and Linux systems are provided below.
 - https://tectonique.net/tomofast-x-q/w_ifx_runtime_p_2025.3.2.835.exe      
 
 
-2) Download the precompiled executable:
+2) Download the precompiled tomofast-x executable:
    
 - https://tectonique.net/tomofast-x-q/tomofastx.exe      
 
