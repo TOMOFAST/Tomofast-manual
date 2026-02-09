@@ -2,12 +2,13 @@
 
 Installation instructions for Windows and Linux systems are provided below.
 
-- [Windows Native](#windows-native)
+- [Windows Native (runtime, recommended!)](#windows-native-runtime-recommended)
+- [Windows Native (for compilation)](#windows-native-for-compilation)
 - [Windows WSL](#windows-wsl)
 - [Linux / MacOS](#linux--macos)
 
 
-#### Windows Native (runtime, Recommended!)
+#### Windows Native (runtime, recommended!)
 1) Download and install oneAPI runtimes:   
    
 - https://tectonique.net/tomofast-x-q/intel-mpi-2021.17.2.93_offline.exe   and 
@@ -34,7 +35,7 @@ mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
 ```  
 
 
-#### Windows Native (for Compilation)
+#### Windows Native (for compilation)
 1) Install Visual Studio Build Tools and C++ Desktop Tools   
    
 - https://visualstudio.microsoft.com/downloads/?q=build+tools   
