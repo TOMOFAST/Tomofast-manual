@@ -51,7 +51,6 @@ mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
 - Follow Instructions
 
 
-4) Compile code from scratch 
 
 ##### To compile the source code from scratch:
 - i.	Download and unzip latest tomofast-x code from: 
