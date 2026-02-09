@@ -8,7 +8,7 @@ Installation instructions for Windows and Linux systems are provided below.
 
 
 #### Windows Native (runtime, Recommended!)
-1) Download and install oneMPI runtimes:   
+1) Download and install oneAPI runtimes:   
    
 - https://tectonique.net/tomofast-x-q/intel-mpi-2021.17.2.93_offline.exe   and 
      
