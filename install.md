@@ -14,18 +14,21 @@ Installation instructions for Windows and Linux systems are provided below.
      
 - https://tectonique.net/tomofast-x-q/w_ifx_runtime_p_2025.3.2.835.exe      
 
+2) Download and unzip the tomofast-x files from github so that you have some test data:
 
-2) Download the precompiled tomofast-x executable:
+- https://github.com/TOMOFAST/Tomofast-x
+   
+3) Download the precompiled tomofast-x executable into the unzipped tomofast-x directory:
    
 - https://tectonique.net/tomofast-x-q/tomofastx.exe     
 
-3) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
+4) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
 
 - Once the console is open, type (including quotes where shown):
 ``` 
 “C:\Program Files (x86)\Intel\oneAPI\setvars.bat”
 ``` 
-4) Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
+5) Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
 ``` 
 mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
 ```  
