@@ -17,7 +17,18 @@ Installation instructions for Windows and Linux systems are provided below.
 
 2) Download the precompiled tomofast-x executable:
    
-- https://tectonique.net/tomofast-x-q/tomofastx.exe      
+- https://tectonique.net/tomofast-x-q/tomofastx.exe     
+
+3) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
+
+- Once the console is open, type (including quotes where shown):
+``` 
+“C:\Program Files (x86)\Intel\oneAPI\setvars.bat”
+``` 
+4) Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
+``` 
+mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
+```  
 
 
 #### Windows Native (for Compilation)
@@ -40,9 +51,9 @@ Installation instructions for Windows and Linux systems are provided below.
 - Follow Instructions
 
 
-4) Either compile code from scratch or download the precompiled executable.
+4) Compile code from scratch 
 
-##### a)	To compile the source code from scratch:
+##### To compile the source code from scratch:
 - i.	Download and unzip latest tomofast-x code from: 
 
 - https://github.com/TOMOFAST/Tomofast-x
@@ -68,20 +79,6 @@ make WINDOWS=1
 mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
 ```
 
-##### b)	Alternatively, download the precompiled tomofastx.exe file from here:
-
-- https://tectonique.net/tomofast-x-q/tomofastx.exe
-   
-i.	Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
-
-ii.	Once the console is open, type (including quotes where shown):
-``` 
-“C:\Program Files (x86)\Intel\oneAPI\setvars.bat”
-``` 
-iii.	Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
-``` 
-mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
-``` 
 #### Windows WSL
 First install Windows Subsytem for Linux (WSL): Open **Windows PowerShell** or Windows **Command Prompt** in administrator mode by right-clicking and selecting **Run as administrator**, type in the following command on the command line  
 ``` 
