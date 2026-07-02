@@ -27,7 +27,7 @@ Installation instructions for Windows and Linux systems are provided below.
 
 - Once the console is open, type (including quotes where shown):
 ``` 
-“C:\Program Files (x86)\Intel\oneAPI\setvars.bat”
+cmd /k “C:\Program Files (x86)\Intel\oneAPI\setvars.bat”
 ``` 
 5) Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
 ``` 
