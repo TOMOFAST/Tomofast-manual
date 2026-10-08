@@ -30,6 +30,7 @@ You can also run tomofast-x from the Tomofast-x-q QGIS plugin by selecting **Win
 
 
 #### Windows Native (for compilation)
+### These instructions will be updated soon!
 1) Install Visual Studio Build Tools and C++ Desktop Tools   
    
 - https://visualstudio.microsoft.com/downloads/?q=build+tools   
