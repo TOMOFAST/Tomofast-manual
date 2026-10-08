@@ -9,30 +9,24 @@ Installation instructions for Windows and Linux systems are provided below.
 
 
 #### Windows Native (runtime, recommended!)
-1) Download and install oneAPI runtimes:   
-   
-- https://tectonique.net/tomofast-x-q/intel-mpi-2021.17.2.93_offline.exe   and 
-     
-- https://tectonique.net/tomofast-x-q/w_ifx_runtime_p_2025.3.2.835.exe      
+The native Windows build of tomofast-x does not need OpenMPI, Intel MPI or the oneAPI `setvars.bat` script. It is parallelised with OpenMP and uses the available cores automatically.
 
-2) Download and unzip the tomofast-x files from github so that you have some test data:
+1) Download and unzip the tomofast-x files from github so that you have some test data:
 
 - https://github.com/TOMOFAST/Tomofast-x
    
-3) Download the precompiled tomofast-x executable into the unzipped tomofast-x directory:
+2) Download the precompiled tomofast-x executable into the unzipped tomofast-x directory:
    
 - https://tectonique.net/tomofast-x-q/tomofastx.exe     
 
-4) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
+3) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
 
-- Once the console is open, type (including quotes where shown):
+4) Change directory (linux command is cd) to the downloaded tomofastx.exe directory, then type:
 ``` 
-"C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
-``` 
-5) Then change directory (linux command is cd) to downloaded tomofastx.exe directory, then type:
-``` 
-mpiexec -n 4 tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
+tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
 ```  
+
+You can also run tomofast-x from the Tomofast-x-q QGIS plugin by selecting **Windows Native** and giving the path to tomofastx.exe; no other paths are needed.
 
 
 #### Windows Native (for compilation)
