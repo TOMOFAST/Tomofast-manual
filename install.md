@@ -21,7 +21,7 @@ The native Windows build of tomofast-x does not need OpenMPI, Intel MPI or the o
 - https://tectonique.net/tomofast-x-q/tomofastx.exe     
    
 #### For tomofast_x_q plugin versions >= 0.2.17   
-- https://tectonique.net/tomofast-x-q/OPENMP_version/tomofastx.exe     
+- https://tectonique.net/tomofast-x-q/OpenMP_version/tomofastx.exe     
    
 3) Open a **Command Prompt** console from **Start Menu** (click on start icon then type **cmd** and the Command Prompt tool will be shown)
 
