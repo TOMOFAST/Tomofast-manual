@@ -27,7 +27,7 @@ The native Windows build of tomofast-x does not need OpenMPI, Intel MPI or the o
 
 4) Change directory (linux command is cd) to the downloaded tomofastx.exe directory, then type:
 ``` 
-tomofastx.exe -p parfiles\Parfile_mansf_slice.txt
+tomofastx.exe -p [path to Tomofast-x directory]\parfiles\Parfile_mansf_slice.txt
 ```  
 
 You can also run tomofast-x from the Tomofast-x-q QGIS plugin by selecting **Windows Native** and giving the path to tomofastx.exe; no other paths are needed.
