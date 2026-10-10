@@ -30,7 +30,7 @@ The native Windows build of tomofast-x does not need OpenMPI, Intel MPI or the o
 tomofastx.exe -p [path to Tomofast-x directory]\parfiles\Parfile_mansf_slice.txt
 ```  
 
-You can also run tomofast-x from the Tomofast-x-q QGIS plugin by selecting **Windows Native** and giving the path to tomofastx.exe; no other paths are needed.
+You can also run tomofast-x from the Tomofast-x-q QGIS plugin by using the default **Windows Native** mode and giving the path to tomofastx.exe; no other paths are needed, and this path will be remembered.
 
 
 #### Windows Native (for compilation)
